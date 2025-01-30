@@ -9,7 +9,7 @@
     "description": "A in memory metrics consumer intended for use in tests with @metrics/client metric streams",
     "main": "lib/index.js",
     "scripts": {
-        "test": "tap test/*.js",
+        "test": "tap test/*.js --disable-coverage --allow-empty-coverage",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix"
     },
