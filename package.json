@@ -1,0 +1,51 @@
+{
+    "name": "@metrics/test-consumer",
+    "version": "0.0.0",
+    "types": "test-consumer.d.ts",
+    "files": [
+        "lib/",
+        "test-consumer.d.ts"
+    ],
+    "description": "A in memory metrics consumer intended for use in tests with @metrics/client metric streams",
+    "main": "lib/index.js",
+    "scripts": {
+        "test": "tap test/*.js",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix"
+    },
+    "lint-staged": {
+        "*.js": [
+            "eslint --fix",
+            "prettier --write",
+            "git add"
+        ],
+        "*.{md,json,yml}": [
+            "prettier --write",
+            "git add"
+        ],
+        ".eslintrc": [
+            "prettier --write",
+            "git add"
+        ]
+    },
+    "author": "Espen Dalløkken <leftie.friele@gmail.com>",
+    "dependencies": {
+        "@metrics/client": "2.5.4",
+        "abslog": "2.4.4",
+        "readable-stream": "4.7.0"
+    },
+    "devDependencies": {
+        "@semantic-release/changelog": "6.0.3",
+        "@semantic-release/commit-analyzer": "13.0.1",
+        "@semantic-release/git": "10.0.1",
+        "@semantic-release/github": "11.0.1",
+        "@semantic-release/npm": "12.0.1",
+        "@semantic-release/release-notes-generator": "14.0.3",
+        "eslint": "9.19.0",
+        "eslint-config-prettier": "10.0.1",
+        "eslint-plugin-prettier": "5.2.3",
+        "prettier": "3.4.2",
+        "semantic-release": "24.2.1",
+        "tap": "21.0.1"
+    }
+}
