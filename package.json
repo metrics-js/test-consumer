@@ -13,20 +13,12 @@
         "lint": "eslint .",
         "lint:fix": "eslint . --fix"
     },
-    "lint-staged": {
-        "*.js": [
-            "eslint --fix",
-            "prettier --write",
-            "git add"
-        ],
-        "*.{md,json,yml}": [
-            "prettier --write",
-            "git add"
-        ],
-        ".eslintrc": [
-            "prettier --write",
-            "git add"
-        ]
+    "publishConfig": {
+        "access": "public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:metrics-js/test-consumer.git"
     },
     "author": "Espen Dalløkken <leftie.friele@gmail.com>",
     "dependencies": {
