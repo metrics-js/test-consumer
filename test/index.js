@@ -2,6 +2,7 @@
 
 const { test } = require("tap");
 const MetricsClient = require("@metrics/client");
+
 const { TestConsumer, createMetric } = require("../lib/index");
 
 test("has a start and stop method", async (t) => {
