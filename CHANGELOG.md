@@ -1,3 +1,18 @@
+# [2.0.0](https://github.com/metrics-js/test-consumer/compare/v1.0.1...v2.0.0) (2025-01-31)
+
+
+### Features
+
+* uses default export and updated types ([fb19107](https://github.com/metrics-js/test-consumer/commit/fb191073500e91bebbc7a7cb8124d9504f6f01bf))
+
+
+### BREAKING CHANGES
+
+* Changed to using a default export for TestConsumer and added a named export for
+'createMetric' utility object.
+
+Updated types to contain all exports.
+
 ## [1.0.1](https://github.com/metrics-js/test-consumer/compare/v1.0.0...v1.0.1) (2025-01-31)
 
 
