@@ -3,7 +3,8 @@
 const { test } = require("tap");
 const MetricsClient = require("@metrics/client");
 
-const { TestConsumer, createMetric } = require("../lib/index");
+const TestConsumer = require("../lib/index");
+const { createMetric } = TestConsumer;
 
 test("has a start and stop method", async (t) => {
 	const testHelper = new TestConsumer(new MetricsClient());

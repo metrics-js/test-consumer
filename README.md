@@ -18,7 +18,7 @@ Below is a sample test showing how this could be used:
 ```js
 const test = require('tap');
 const Metrics = require('@metrics/client');
-const { TestConsumer } = require('@metrics/test-consumer');
+const TestConsumer = require('@metrics/test-consumer');
 
 test('some test case', async () => {
     const metrics = new Metrics();
@@ -48,6 +48,7 @@ test('some test case', async () => {
     -   [start](#start)
     -   [stop](#stop)
     -  [getResults](#async-getresults)
+- [createMetrics](#createmetrics)
 
 ### constructor(metrics)
 
@@ -64,3 +65,7 @@ Ends the stream setup for the client, returns a Promise which resolves to an arr
 ### async .getResults()
 
 Returns a promise which resolves to an array containing collected `[@metrics/metrics](https://metrics-js.github.io/reference/metric/)` objects.
+
+### createMetrics
+
+Utility object with functions for creating mock `Metric` objects, has the functions `.timer` and `.counter`.
