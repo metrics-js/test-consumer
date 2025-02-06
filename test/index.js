@@ -43,3 +43,26 @@ test("can create dummy metric for counter & timer", async (t) => {
 	const timer = createMetric.timer({ uri: "/lol2" });
 	t.equal(timer.name, "http_request_duration_seconds");
 });
+
+test("lets you get the value of a counter", async (t) => {
+	// Pass in the metrics client you want to consume.
+	const metrics = new MetricsClient();
+	const testHelper = new TestConsumer(metrics);
+	// Sets up the consumer to capture events.
+	testHelper.start();
+
+	const counter = metrics.counter({
+		name: "a_custom_counter_metric",
+		description: "A custom metric",
+	});
+	counter.inc(2, { labels: { type: "some_label" } });
+
+	// Ends the streams, now we can get the result.
+	testHelper.stop();
+
+	const result = await testHelper.getResults();
+	const metric = result.find((m) => m.name === "a_custom_counter_metric");
+
+	t.ok(metric, "Expected to find metric a_custom_counter_metric");
+	t.equal(metric.value, 2);
+});
