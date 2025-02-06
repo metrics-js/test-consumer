@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/metrics-js/test-consumer/compare/v2.0.0...v2.1.0) (2025-02-06)
+
+
+### Features
+
+* return the whole metric object from getResults() ([c146b44](https://github.com/metrics-js/test-consumer/commit/c146b44df1470c588458c541d448762994a1786b))
+
 # [2.0.0](https://github.com/metrics-js/test-consumer/compare/v1.0.1...v2.0.0) (2025-01-31)
 
 
