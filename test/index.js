@@ -4,7 +4,70 @@ const { test } = require("tap");
 const MetricsClient = require("@metrics/client");
 
 const TestConsumer = require("../lib/index");
-const { createMetric } = TestConsumer;
+
+/**
+ * Helper object for creating dummy metrics for tests.
+ */
+const createMetric = {
+	/**
+	 * Returns a metrics object for a timer
+	 * @param {object} [options={}]
+	 * @param {string} [options.uri]
+	 * @param {string} [options.method]
+	 * @param {string|number} [options.status]
+	 * @param {string|object} [options.type]
+	 * @return {{name, labels: *[]}}
+	 */
+	timer: (options = {}) => {
+		const { uri, method, status, type } = options;
+		return createMetric.base({
+			name: "http_request_duration_seconds",
+			uri,
+			method,
+			status,
+			type,
+		});
+	},
+
+	/**
+	 * Returns a metrics object for a counter
+	 * @param {object} [options={}]
+	 * @param {string} [options.uri]
+	 * @param {string} [options.method]
+	 * @param {string|number} [options.status]
+	 * @param {object} [options.type]
+	 * @return {{name, labels: *[]}}
+	 */
+	counter: (options = {}) => {
+		const { uri, method, status, type } = options;
+
+		return createMetric.base({
+			name: "http_requests_total",
+			uri,
+			method,
+			status,
+			type,
+		});
+	},
+
+	/**
+	 * @param {object} options
+	 * @param {string} options.name
+	 * @param {string} options.uri=undefined
+	 * @param {string} options.method="GET"
+	 * @param {string|number} options.status=204
+	 * @return {{name, labels: *[]}}
+	 * @private
+	 */
+	base: ({ name, uri = undefined, method = "GET", status = 204 }) => ({
+		name,
+		labels: [
+			...(method ? [{ name: "method", value: method }] : []),
+			...(uri ? [{ name: "uri", value: uri }] : []),
+			...(status ? [{ name: "status", value: status }] : []),
+		],
+	}),
+};
 
 test("has a start and stop method", async (t) => {
 	const testHelper = new TestConsumer(new MetricsClient());
