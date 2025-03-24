@@ -1,3 +1,17 @@
+# [3.0.0](https://github.com/metrics-js/test-consumer/compare/v2.1.0...v3.0.0) (2025-03-24)
+
+
+### Bug Fixes
+
+* remove createMetric export from package ([2b287a4](https://github.com/metrics-js/test-consumer/commit/2b287a4b333eff858d04c8d64ab1de04daddde39))
+
+
+### BREAKING CHANGES
+
+* the createMetric function no longer exists.
+Make your own should you need it. See test/index.js in
+https://github.com/metrics-js/test-consumer for inspiration.
+
 # [2.1.0](https://github.com/metrics-js/test-consumer/compare/v2.0.0...v2.1.0) (2025-02-06)
 
 
