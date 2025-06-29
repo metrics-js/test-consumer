@@ -22,7 +22,7 @@
     },
     "author": "Espen Dalløkken <leftie.friele@gmail.com>",
     "dependencies": {
-        "@metrics/client": "2.5.4",
+        "@metrics/client": "2.5.5",
         "abslog": "2.4.4",
         "readable-stream": "4.7.0"
     },
