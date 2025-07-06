@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/metrics-js/test-consumer/compare/v3.0.0...v3.0.1) (2025-07-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @metrics/client to v2.5.5 ([#3](https://github.com/metrics-js/test-consumer/issues/3)) ([b664a29](https://github.com/metrics-js/test-consumer/commit/b664a297394c21f1bb9858fcb554bd7ca2e222e6))
+
 # [3.0.0](https://github.com/metrics-js/test-consumer/compare/v2.1.0...v3.0.0) (2025-03-24)
 
 
