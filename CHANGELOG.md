@@ -1,3 +1,10 @@
+## [3.0.2](https://github.com/metrics-js/test-consumer/compare/v3.0.1...v3.0.2) (2026-10-12)
+
+
+### Bug Fixes
+
+* **deps:** update dependency readable-stream to v4.8.0 ([#35](https://github.com/metrics-js/test-consumer/issues/35)) ([86e93d7](https://github.com/metrics-js/test-consumer/commit/86e93d78b4c8fdcde407294b411bddf57c0add6b))
+
 ## [3.0.1](https://github.com/metrics-js/test-consumer/compare/v3.0.0...v3.0.1) (2025-07-06)
 
 
