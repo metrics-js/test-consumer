@@ -24,7 +24,7 @@
     "dependencies": {
         "@metrics/client": "2.5.5",
         "abslog": "2.4.4",
-        "readable-stream": "4.7.0"
+        "readable-stream": "4.8.0"
     },
     "devDependencies": {
         "@metrics/semantic-release-config": "1.0.0",
